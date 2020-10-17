@@ -24,10 +24,12 @@ function VarenneBfAQuests:prepareData(data)
         for questId, QuestName in pairs(v) do
             resultVal = QuestName
 
-            if (self.QuestsCompleted[questId] == true) then
+            if (C_QuestLog.IsQuestFlaggedCompleted (questId)== true) then
                 resultVal = "DONE " .. resultVal
-            elseif (self.QuestsCompleted[questId] == false) then
+            elseif (C_QuestLog.GetLogIndexForQuestID(questId) ~= nil) then
                 resultVal = "IN QUEST LOG " .. resultVal
+            else
+                resultVal = "INCOMPLETE " .. resultVal
             end
         end
 
