@@ -40,7 +40,7 @@ end
 
 VarenneBfAQuestsFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" and addonName == self.ADDON_NAME then
-        VarenneBfAQuests.QuestsCompleted = GetQuestsCompleted()
+        VarenneBfAQuests.QuestsCompleted = C_QuestLog.GetAllCompletedQuestIDs()
         SLASH_VARENNEBFAQQUESTS1 = '/vdtq';
 
         SlashCmdList["VARENNEBFAQQUESTS"] = function(args)

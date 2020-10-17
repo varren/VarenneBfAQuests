@@ -1,4 +1,4 @@
-## Interface: 80000
+## Interface: 90001
 ## Title: VarenneBfAQuests
 ## Author: Varren@Azuregos-RU
 ## Version: 0.1
